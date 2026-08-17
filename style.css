@@ -398,7 +398,7 @@ box-shadow:inset 0 0 0 1px rgba(255, 255, 255, .05), 0 26px 50px -22px rgb(255 2
 /* ============ GALLERY ============ */
 #gallery{background-color: white;}
 .gal-board{display: flex;flex-wrap: nowrap;gap: clamp(24px, 3.4vw, 23px);justify-content: center;padding: 20px 0;}
-.sleeve{position:relative;width:min(230px,78vw);aspect-ratio:1;transform:rotate(var(--r,0deg));transition:transform .6s var(--ease);z-index:1; height: 330px;}
+.sleeve{position:relative;width:min(300px,78vw);aspect-ratio:1;transform:rotate(var(--r,0deg));transition:transform .6s var(--ease);z-index:1; height: 330px;}
 .sleeve:nth-child(odd){margin-top:34px}
 .sleeve:hover{transform:rotate(0deg) translateY(-10px);z-index:3}
 .vinyl2{position: absolute;top: 20%;left: 16%;width: 83%;height: 60%;border-radius: 50%; background:repeating-radial-gradient(circle at 50% 50%,#0E0813 0 2px,#1A0F20 2px 4px);
