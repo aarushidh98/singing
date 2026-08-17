@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singing Idols — The Singing Competition</title>
+<meta name="description" content="The nation's most prestigious vocal championship. Nine seasons. One golden microphone. The Grand Meridian Opera House awaits your voice.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23D4AF37'>♪</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progressBar" aria-hidden="true"></div>
+
+<!-- ===== CURTAIN INTRO ===== -->
+<div class="curtain-wrap" id="curtainWrap" aria-hidden="true">
+  <div class="stage-glow"></div>
+  <div class="curtain-mark">
+    <p class="cm-eyebrow">SEASON I</p>
+    <h1 class="cm-title">SINGING IDOLS</h1>
+    <span class="cm-line"></span>
+  </div>
+  <div class="curtain c-left">
+    <div class="tassel"><svg viewBox="0 0 44 120"><path d="M22 4v26" stroke="#D4AF37" stroke-width="3"/><circle cx="22" cy="36" r="8" fill="#D4AF37"/><path d="M14 44h16l-2 26H16z" fill="#F4D06F"/><path d="M16 70v34M20 70v40M24 70v40M28 70v34" stroke="#D4AF37" stroke-width="2.4"/></svg></div>
+  </div>
+  <div class="curtain c-right">
+    <div class="tassel"><svg viewBox="0 0 44 120"><path d="M22 4v26" stroke="#D4AF37" stroke-width="3"/><circle cx="22" cy="36" r="8" fill="#D4AF37"/><path d="M14 44h16l-2 26H16z" fill="#F4D06F"/><path d="M16 70v34M20 70v40M24 70v40M28 70v34" stroke="#D4AF37" stroke-width="2.4"/></svg></div>
+  </div>
+  <div class="valance"></div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#hero"><span class="b-mark">♪</span>Singing <em>Idols</em></a>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#categories">Categories</a>
+    <a href="#awards">Awards</a>
+    <a href="#register">Journey</a>
+    <a href="#why">Evaluation</a>
+    <a href="#gallery">Details</a>
+  </nav>
+  <div class="header-right">
+    <a href="#register" class="btn btn-gold btn-sm">Register <span class="arr">→</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<nav class="m-menu" id="mMenu" aria-label="Mobile">
+  <a href="#about" style="transition-delay:.1s">About <small>01</small></a>
+  <a href="#categories" style="transition-delay:.16s">Categories <small>02</small></a>
+  <a href="#awards" style="transition-delay:.22s">Awards <small>03</small></a>
+  <a href="#register" style="transition-delay:.28s">Journey <small>04</small></a>
+  <a href="#why" style="transition-delay:.34s">Evaluation <small>05</small></a>
+  <a href="#gallery" style="transition-delay:.4s">Details <small>06</small></a>
+  <a href="#register" class="btn btn-gold m-menu-cta" style="opacity:0;transform:translateY(20px);transition-delay:.46s; color: var(--bg);">Register Now <span class="arr">→</span></a>
+  <p class="m-menu-foot">Season IX · 2025 — 2026 · Grand Meridian Opera House</p>
+</nav>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><img id="heroImg" src="image/image (1).png" alt="A soloist performing beneath warm golden stage lights"></div>
+  <!-- <div class="hero-haze" aria-hidden="true"></div> -->
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="hero-notes" aria-hidden="true">
+    <span style="left:8%;--dur:17s;--del:0s;--fs:24px;--dx:60px">♪</span>
+    <span style="left:22%;--dur:21s;--del:3s;--fs:34px;--dx:-40px">𝄞</span>
+    <span style="left:46%;--dur:19s;--del:6s;--fs:22px;--dx:50px">♫</span>
+    <span style="left:64%;--dur:23s;--del:1.5s;--fs:30px;--dx:-60px">♬</span>
+    <span style="left:80%;--dur:18s;--del:4.5s;--fs:26px;--dx:45px">♪</span>
+    <span style="left:91%;--dur:24s;--del:8s;--fs:20px;--dx:-30px">♫</span>
+  </div>
+
+  <!-- <div class="hero-inner">
+    <p class="hero-eyebrow ui"><span class="dot"></span> The Ninth Season · 2025 — 2026</p>
+    <h1 id="heroTitle" aria-label="Where voices become immortal">Where Voices<br>Become <em>Immortal.</em></h1>
+    <p class="hero-sub ui">The nation's most prestigious vocal championship returns to the Grand Meridian Opera House. One stage. Twelve finalists. A single golden microphone.</p>
+    <div class="hero-cta ui">
+      <a href="#register" class="btn btn-gold">Begin Your Audition <span class="arr">→</span></a>
+      <a href="#about" class="btn btn-ghost">▶&ensp;Watch the Season Film</a>
+    </div>
+    <div class="wave ui" id="heroWave" aria-hidden="true"></div>
+  </div> -->
+
+  <!-- <p class="hero-side ui">Est. 2017 — A National Institution of Song</p> -->
+  <!-- <div class="hero-scroll ui" aria-hidden="true">Scroll<b></b></div> -->
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mqTrack">
+    <span><b class="solid">Registrations Open</b><i>✦</i><b class="outl">Season I</b><i>✦</i><b class="solid">Singing Idols</b><i>✦</i><b class="outl">Grand Finale · Oct 2026</b><i>✦</i><b class="solid">Win ₹10,000</b><i>✦</i></span>
+    <span><b class="solid">Registrations Open</b><i>✦</i><b class="outl">Season I</b><i>✦</i><b class="solid">Singing Idols</b><i>✦</i><b class="outl">Grand Finale · Oct 2026</b><i>✦</i><b class="solid">Win ₹10,000</b><i>✦</i></span>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="about-head">
+          <p class="eyebrow">SINGING IDOLS 2026</p>
+          <h2 class="split" data-anim="lines" style="font-family:var(--disp);font-weight:500;font-size:clamp(38px,5vw,68px);line-height:1;margin:24px 0 30px">Where Every Voice <em style="color:var(--gold-hi)">Becomes a Star.</em></h2>
+        </div>
+        <div class="about-text" data-rv>
+          <p class="lead" data-rv>Sing with Confidence · Perform with Passion · Shine with Pride</p>
+          <p>Every child has a unique voice. Sometimes, all they need is the right stage to let the world hear it.</p>
+          <p>Singing Idols 2026 is a prestigious musical platform by Bachpan Play School & Academic Heights Public School (AHPS), created to discover, nurture, and celebrate the incredible singing talent of young performers.</p>
+          <p>More than just a competition, Singing Idols is a journey of confidence, creativity, and self-expression—where every participant learns, grows, and experiences the joy of performing on a grand stage</p>
+          <p style="color: var(--gold-hi);">If your child loves to sing, this is their moment to shine.</p>
+        </div>
+      </div>
+      <div class="about-visual" data-rv>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="cir" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#cir">SINGING IDOL · Season I</textPath></text></svg>
+          <span class="b-note">♪</span>
+        </div>
+        <div class="ph ph-frame ph-main"><img data-par="16" src="image/about.png" alt="A soprano mid-performance on the opera house stage"></div>
+        <!-- <div class="ph ph-sub"><img data-par="-10" src="https://picsum.photos/seed/audition-room-piano/700/520" alt="An audition room with a grand piano"></div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section id="categories" style="background-color: #fff;">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow-p" style="color: #6d0c78;">Golden Entry</p>
+        <h2 class="split" data-anim="lines" style="color: #111;">Your Journey to the<br>One <em style="color: #6d0c78;">Grand Finale</em> Begins Here.</h2>
+      </div>
+      <p class="sh-right" style="color: #333;" data-rv><strong>Dreaming of performing on a prestigious stage?</strong><br><strong>The Golden Entry</strong> category gives young singers the opportunity to showcase their talent, impress our expert judges,<br> and secure their place in the <strong>Live Grand Finale.</strong></p>
+      
+
+    </div>
+    <div class="cat-grid">
+      <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>Singing Idol 2026</span></div>
+          <h3>Little <span>Idols</span></h3>
+          <p class="t-desc">A stage for our littlest voices to shine bright with confidence and joy.</p>
+          <div class="t-meta"><span><b>Age</b> (2-6 Years)</span><br><span><b>Performance Category</b> Solo</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>01</b></div><div><div class="stub-no">SI-26-001</div><div class="barcode"></div></div></div>
+      </article>
+      <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>SINGING IDOL 2026</span></div>
+          <h3>Rising <span>Idols</span></h3>
+          <p class="t-desc">Young voices with growing passion, ready to rise and inspire.</p>
+          <div class="t-meta"><span><b>Age</b> (7–11 Years)</span><br><span><b>Performance Category</b> Solo</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>02</b></div><div><div class="stub-no">SI-26-002</div><div class="barcode"></div></div></div>
+      </article>
+      <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>SINGING IDOLS 2026</span></div>
+          <h3>Young <span>Idols</span></h3>
+          <p class="t-desc">Powerful voices. Real talent. The future of music begins here.</p>
+          <div class="t-meta"><span><b>Age</b> (12–18 Years)</span><br><span><b>Performance Category</b> Solo</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>03</b></div><div><div class="stub-no">SI-26-003</div><div class="barcode"></div></div></div>
+      </article>
+      <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>PERFORMANCE CATEGORY</span></div>
+          <h3>Solo <span>Singing</span></h3>
+          <p class="t-desc">One mic. One voice. All the spotlight. This is your moment.</p>
+          <div class="t-meta"><span><b>Registration Opens</b> 1 Aug 2026</span><span><b>Venue</b> Delhi NCR</span><span><b>Prize</b> Upto ₹10,000</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>04</b></div><div><div class="stub-no">SI-26-004</div><div class="barcode"></div></div></div>
+      </article>
+      <!-- <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>Ages 16 — 35</span><span>Season IX</span></div>
+          <h3>Senior <span>Division</span></h3>
+          <p class="t-desc">The proving ground for conservatory graduates and rising professionals on the verge.</p>
+          <div class="t-meta"><span><b>Dates</b> Feb 02 — Feb 20</span><span><b>Venue</b> Meridian Hall</span><span><b>Prize</b> $80,000</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>05</b></div><div><div class="stub-no">TGC-25-005</div><div class="barcode"></div></div></div>
+      </article> -->
+      <!-- <article class="ticket" data-rv>
+        <div class="t-main">
+          <div class="t-top"><span>Ages 36 +</span><span>Season IX</span></div>
+          <h3>Open <span>Masters</span></h3>
+          <p class="t-desc">For voices that lived first and sang later. No age ceiling, no apologies, no limits.</p>
+          <div class="t-meta"><span><b>Dates</b> Feb 23 — Mar 06</span><span><b>Venue</b> Velvet Lounge</span><span><b>Prize</b> $40,000</span></div>
+        </div>
+        <div class="t-stub"><div class="stub-admit">No.<b>06</b></div><div><div class="stub-no">TGC-25-006</div><div class="barcode"></div></div></div>
+      </article> -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== AWARDS ===== -->
+<section id="awards">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Awards &amp; Recognition</p>
+        <h2 class="split" data-anim="lines">Why <em>Participate.</em></h2>
+      </div>
+      <p class="sh-right" data-rv>Perform on a prestigious musical platform & Win Exciting Cash Rewards.</p>
+    </div>
+    <div class="podium">
+      <div class="pod" data-rv>
+        <div class="troph-silver">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="silverGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F4F6F8"/>
+                <stop offset="55%" stop-color="#C7CDD6"/>
+                <stop offset="100%" stop-color="#8B93A0"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 14 h40 v18 a20 20 0 0 1 -40 0 z" fill="url(#silverGrad)"/>
+            <path d="M30 19 q-16 0 -16 15 q0 13 16 15" fill="none" stroke="url(#silverGrad)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M70 19 q16 0 16 15 q0 13 -16 15" fill="none" stroke="url(#silverGrad)" stroke-width="7" stroke-linecap="round"/>
+            <rect x="46" y="52" width="8" height="12" fill="url(#silverGrad)"/>
+            <rect x="34" y="64" width="32" height="8" rx="4" fill="url(#silverGrad)"/>
+            <rect x="28" y="72" width="44" height="11" rx="5" fill="url(#silverGrad)"/>
+          </svg>
+        </div>
+        <p class="place">Second Place</p><p class="sum">₹5,000 </p>
+      </div>
+      <div class="pod pod-main" data-rv>
+        <div class="troph">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFE9A8"/>
+                <stop offset="50%" stop-color="#F4C542"/>
+                <stop offset="100%" stop-color="#C4871A"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 12 h40 v19 a20 20 0 0 1 -40 0 z" fill="url(#goldGrad)"/>
+            <path d="M30 17 q-17 0 -17 16 q0 14 17 16" fill="none" stroke="url(#goldGrad)" stroke-width="7.5" stroke-linecap="round"/>
+            <path d="M70 17 q17 0 17 16 q0 14 -17 16" fill="none" stroke="url(#goldGrad)" stroke-width="7.5" stroke-linecap="round"/>
+            <rect x="45.5" y="50" width="9" height="13" fill="url(#goldGrad)"/>
+            <rect x="33" y="63" width="34" height="9" rx="4.5" fill="url(#goldGrad)"/>
+            <rect x="26" y="72" width="48" height="12" rx="6" fill="url(#goldGrad)"/>
+          </svg>
+        </div>
+        <p class="place">The Grand <br>Prize</p><p class="sum">₹10,000 </p>
+      </div>
+      <div class="pod" data-rv>
+        <div class="troph-bronze">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="bronzeGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#E8B27E"/>
+                <stop offset="55%" stop-color="#CD7F32"/>
+                <stop offset="100%" stop-color="#8C5322"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 14 h40 v18 a20 20 0 0 1 -40 0 z" fill="url(#bronzeGrad)"/>
+            <path d="M30 19 q-16 0 -16 15 q0 13 16 15" fill="none" stroke="url(#bronzeGrad)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M70 19 q16 0 16 15 q0 13 -16 15" fill="none" stroke="url(#bronzeGrad)" stroke-width="7" stroke-linecap="round"/>
+            <rect x="46" y="52" width="8" height="12" fill="url(#bronzeGrad)"/>
+            <rect x="34" y="64" width="32" height="8" rx="4" fill="url(#bronzeGrad)"/>
+            <rect x="28" y="72" width="44" height="11" rx="5" fill="url(#bronzeGrad)"/>
+          </svg>
+        </div>
+        <p class="place">Third Place</p><p class="sum">₹7,500 </p>
+      </div>
+    </div>
+    <div class="honors" data-rv>
+      <span class="honor"><i>✦</i> Participation Certificate for every registered participant.</span>
+      <span class="honor"><i>✦</i> Opportunity to perform LIVE before an esteemed judging panel.</span>
+      <span class="honor"><i>✦</i> Build confidence, stage presence, and communication skills.</span>
+      <span class="honor"><i>✦</i> Experience the joy of music, learning, and healthy competition.</span>
+      <span class="honor"><i>✦</i> Because every performance is a step towards discovering the star within.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGISTRATION ===== -->
+<section id="register">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow-p" style="color: #6d0c78;">Competition Rounds</p>
+        <h2 class="split" data-anim="lines" style="color: #111;">Competition <em style="color: #6d0c78;">Journey.</em></h2>
+      </div>
+      <p class="sh-right" style="color: #333;" data-rv>Your musical journey starts with a simple online registration.</p>
+    </div>
+    
+    <div class="reg-panel" data-rv>
+      <div class="reg-top"><div class="reg-foot-text"><p class="deadline"><b>Round 1 – Online Audition</b></p></div></div>
+      <div class="reg-steps">
+        <div class="wire" aria-hidden="true"><i></i></div>
+        <div class="r-step"><div class="pip">i</div><h3>Register through your school.</h3><p>Your name, your division, your city. One page, five minutes.</p></div>
+        <div class="r-step"><div class="pip">ii</div><h3>Upload your singing performance.</h3><p>Any genre, any language. A phone recording is enough.</p></div>
+        <div class="r-step"><div class="pip">iii</div><h3>Expert judges will evaluate every entry.</h3><p>The judges listen blind. Decisions arrive within few days.</p></div>
+        <div class="r-step"><div class="pip">iv</div><h3>The top performers from each category will qualify for the Grand Finale.</h3><p>Accepted singers are scheduled into Delhi NCR audition evening.</p></div>
+      </div>
+      <div class="reg-foot">
+        <div class="reg-foot-text">
+          <p class="deadline"><b>Round 2 – Grand Finale</b></p>
+          <p class="reg-foot-desc">The shortlisted participants will perform LIVE before an esteemed panel of judges and a vibrant audience. This is where talent meets opportunity and unforgettable memories are created.</p>
+        </div>
+        <a href="#" class="btn btn-gold">Register Your Voice <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section id="why">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Evaluation</p>
+        <h2 class="split" data-anim="lines">What the <em>Judges</em> <br> Look For?</h2>
+      </div>
+      <p class="sh-right" data-rv>Every performance is evaluated on.</p>
+    </div>
+    <div class="why-grid">
+      <article class="f-card" data-num="I" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></div>
+        <h3>Vocal Ability</h3>
+      </article>
+      <article class="f-card" data-num="II" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5" opacity=".5"/><circle cx="12" cy="12" r="1.4" fill="#D4AF37"/></svg></div>
+        <h3>Melody & Rendering</h3>
+      </article>
+      <article class="f-card" data-num="III" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-16 3 14 2-4h3"/></svg></div>
+        <h3>Pitch, Rhythm & Tone</h3>
+      </article>
+      <article class="f-card" data-num="IV" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="2.2"/><path d="M8.2 6.8a5.4 5.4 0 0 1 7.6 0M5.6 4.4a9 9 0 0 1 12.8 0M12 11.2V21"/></svg></div>
+        <h3>Stage Presence & Confidence</h3>
+      </article>
+      <article class="f-card" data-num="V" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3.5v12.5a3.2 3.2 0 1 1-2.4-3.1M7 7l9-2.6v10.6a3.2 3.2 0 1 1-2.4-3.1"/></svg></div>
+        <h3>Emotional Expression & Song Interpretation</h3>
+      </article>
+      <article class="f-card" data-num="VI" data-rv>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="5" cy="17" r="1.7"/><circle cx="12" cy="7" r="1.7"/><circle cx="19" cy="14" r="1.7"/><path d="M6.3 15.9 10.8 8.4M13.6 7.8l4 4.9" opacity=".6"/></svg></div>
+        <h3>Overall Presentation</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow-p" style="color: #6d0c78;">Event Details</p>
+        <h2 class="split" data-anim="lines" style="color: #111;">Five Moments <em style="color: #6d0c78;">One Season.</em></h2>
+      </div>
+      <p class="sh-right" data-rv style="color: #333;">Follow the wave from the moment you register <br> to the night the hall rises for you.</p>
+    </div>
+    <div class="gal-board">
+      <figure class="sleeve" style="--r:-2.5deg" data-rv>
+        <div class="vinyl2"></div>
+        <div class="cover">
+          <div class="cov-head"><span>Season I</span><span>01</span></div>
+          <div class="cov-body">
+            <h3>Registration Opens</h3>
+            <p>Every voice gets a starting line. Sign up, upload, and step in.</p>
+            <div class="cov-tags"><span>Free Entry</span><span>All Ages</span></div>
+          </div>
+          <div class="cov-foot"><span class="cov-date">1 Aug 2026</span><span class="cov-arr">→</span></div>
+        </div>
+      </figure>
+
+      <figure class="sleeve" style="--r:1.8deg" data-rv>
+        <div class="vinyl2"></div>
+        <div class="cover">
+          <div class="cov-head"><span>Season I</span><span>02</span></div>
+          <div class="cov-body">
+            <h3>Round 1 Results</h3>
+            <p>Blind judging closes and the shortlist for Delhi NCR goes live.</p>
+            <div class="cov-tags"><span>Blind Judged</span></div>
+          </div>
+          <div class="cov-foot"><span class="cov-date">20 Sep 2026</span><span class="cov-arr">→</span></div>
+        </div>
+      </figure>
+
+      <figure class="sleeve" style="--r:-1.4deg" data-rv>
+        <div class="vinyl2"></div>
+        <div class="cover">
+          <div class="cov-head"><span>Season I</span><span>03</span></div>
+          <div class="cov-body">
+            <h3>Grand Finale</h3>
+            <p>Shortlisted singers perform LIVE before the panel and a full house.</p>
+            <div class="cov-tags"><span>Live Performance</span></div>
+          </div>
+          <div class="cov-foot"><span class="cov-date">31 Oct 2026</span><span class="cov-arr">→</span></div>
+        </div>
+      </figure>
+
+      <figure class="sleeve" style="--r:2.6deg" data-rv>
+        <div class="vinyl2"></div>
+        <div class="cover">
+          <div class="cov-head"><span>Season I</span><span>04</span></div>
+          <div class="cov-body">
+            <h3>Venue</h3>
+            <p>The finale stage lights up in the heart of the capital region.</p>
+            <div class="cov-tags"><span>Delhi NCR</span></div>
+          </div>
+          <div class="cov-foot"><span class="cov-date">Grand Meridian</span><span class="cov-arr">→</span></div>
+        </div>
+      </figure>
+
+      <figure class="sleeve" style="--r:-2deg" data-rv>
+        <div class="vinyl2"></div>
+        <div class="cover">
+          <div class="cov-head"><span>Season I</span><span>05</span></div>
+          <div class="cov-body">
+            <h3>Participation Fee</h3>
+            <p>One entry, one shot at the mainstage. No hidden costs.</p>
+            <div class="cov-tags"><span>Per Participant</span></div>
+          </div>
+          <div class="cov-foot"><span class="cov-date">₹1,500</span><span class="cov-arr">→</span></div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<!-- <section id="journey">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Event Details</p>
+        <h2 class="split" data-anim="lines">From first note<br>to <em>final ovation.</em></h2>
+      </div>
+      <p class="sh-right" data-rv>Five movements, one season. Follow the wave from the moment you register to the night the hall rises for you.</p>
+    </div>
+    <div class="j-track">
+      <svg class="j-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path class="ghost" d="M0,60 C120,20 240,100 360,60 C480,20 600,100 720,60 C840,20 960,100 1080,60 C1140,40 1170,50 1200,60"/>
+        <path d="M0,60 C120,20 240,100 360,60 C480,20 600,100 720,60 C840,20 960,100 1080,60 C1140,40 1170,50 1200,60"/>
+      </svg>
+      <div class="j-steps">
+        <div class="j-step" data-rv><div class="node">I</div><h3>Registrations Open</h3><p class="when">1 August 2026</p></div>
+        <div class="j-step" data-rv><div class="node">II</div><h3>Round 1 Results</h3><p class="when">20 September 2026</p></div>
+        <div class="j-step" data-rv><div class="node">III</div><h3>Grand Finale</h3><p class="when">31 October 2026</p></div>
+        <div class="j-step" data-rv><div class="node">IV</div><h3>Participation Fee</h3><p class="when">₹1,500 per participant</p></div>
+        <div class="j-step" data-rv><div class="node">V</div><h3>Venue</h3><p class="when">Delhi NCR</p></div>        
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== JUDGES ===== -->
+<!-- <section id="judges">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">05 · The Panel</p>
+        <h2 class="split" data-anim="lines">Voices judging<br><em>voices.</em></h2>
+      </div>
+      <p class="sh-right" data-rv>Every judge is a performer first. They listen the way only singers can — for truth, colour, and the courage in a held note.</p>
+    </div>
+    <div class="judge-grid">
+      <article class="judge" data-rv>
+        <div class="ph"><img src="https://picsum.photos/seed/judge-soprano-portrait/600/800" alt="Portrait of soprano Isabelle Laurent"></div>
+        <div class="j-info"><span class="j-no">Judge · I</span><h3>Isabelle Laurent</h3><p class="role">Principal Soprano</p><p class="cred">Twenty seasons at the National Opera.</p></div>
+      </article>
+      <article class="judge" data-rv>
+        <div class="ph"><img src="https://picsum.photos/seed/judge-orchestra-conductor/600/800" alt="Portrait of conductor David Adeyemi"></div>
+        <div class="j-info"><span class="j-no">Judge · II</span><h3>David Adeyemi</h3><p class="role">Conductor &amp; Composer</p><p class="cred">Music director of the Meridian Philharmonic.</p></div>
+      </article>
+      <article class="judge" data-rv>
+        <div class="ph"><img src="https://picsum.photos/seed/judge-soul-vocalist/600/800" alt="Portrait of soul vocalist Mara Voss"></div>
+        <div class="j-info"><span class="j-no">Judge · III</span><h3>Mara Voss</h3><p class="role">Soul &amp; Jazz Vocalist</p><p class="cred">Three-time national record award winner.</p></div>
+      </article>
+      <article class="judge" data-rv>
+        <div class="ph"><img src="https://picsum.photos/seed/judge-operatic-tenor/600/800" alt="Portrait of tenor Rafael Ortega"></div>
+        <div class="j-info"><span class="j-no">Judge · IV</span><h3>Rafael Ortega</h3><p class="role">Operatic Tenor</p><p class="cred">Debuted at La Scala at twenty-four.</p></div>
+      </article>
+    </div>
+    <div class="j-chair" data-rv>
+      <div class="ph"><img src="https://picsum.photos/seed/artistic-director-portrait/400/400" alt="Portrait of artistic director Elena Marchetti"></div>
+      <div>
+        <p class="role">Chair of the Panel</p>
+        <h3>Elena Marchetti</h3>
+        <p>Mezzo-soprano, founder and artistic director. "We are not searching for perfection. We are searching for the voice you cannot forget on the walk home."</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== HALL OF FAME ===== -->
+<!-- <section id="fame">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">06 · Hall of Fame</p>
+        <h2 class="split" data-anim="lines">Pressed in gold,<br>kept <em>forever.</em></h2>
+      </div>
+      <p class="sh-right" data-rv>Every champion receives a gold-pressed record of their finale performance, archived here for the seasons to come.</p>
+    </div>
+    <div class="fame-row" data-rv>
+      <div class="disc-wrap"><div class="vinyl"><div class="label"><div><b>Amara<br>Okafor</b><i>Champion · MMXXIV</i></div></div></div></div>
+      <div class="fame-info"><p class="f-year">2024</p><h3>Amara Okafor</h3><p class="f-cat">Solo Voice · Grand Prix</p><p>Her finale aria, sung by candlelight after a hall-wide power failure, became the most broadcast performance in the competition's history.</p></div>
+    </div>
+    <div class="fame-row" data-rv>
+      <div class="disc-wrap"><div class="vinyl"><div class="label"><div><b>Luca<br>Moretti</b><i>Champion · MMXXIII</i></div></div></div></div>
+      <div class="fame-info"><p class="f-year">2023</p><h3>Luca Moretti</h3><p class="f-cat">Senior Division · Grand Prix</p><p>A dockworker's son with a tenor of rare gold. His debut album went platinum within four months of lifting the Golden Microphone.</p></div>
+    </div>
+    <div class="fame-row" data-rv>
+      <div class="disc-wrap"><div class="vinyl"><div class="label"><div><b>Ha-eun<br>Seo</b><i>Champion · MMXXII</i></div></div></div></div>
+      <div class="fame-info"><p class="f-year">2022</p><h3>Ha-eun Seo</h3><p class="f-cat">Solo Voice · Audience Choice</p><p>The first finalist to win both the jury's grand prix and the audience vote in the same season — by the widest margin on record.</p></div>
+    </div>
+    <div class="fame-row" data-rv>
+      <div class="disc-wrap"><div class="vinyl"><div class="label"><div><b>Celeste<br>Choir</b><i>Champions · MMXXI</i></div></div></div></div>
+      <div class="fame-info"><p class="f-year">2021</p><h3>The Celeste Chamber Choir</h3><p class="f-cat">Choir Division · Grand Prix</p><p>Sixteen voices that moved the panel to silence before applause. Now in their fifth year of a national residency.</p></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="voices" style="padding: 0;">
+  <div class="container">    
+    <div class="quote-row" data-rv>
+      <div class="disc-wrap"><div class="vinyl"><div class="label"><div><b>Singing<br>Idols</b><i>Season · I</i></div></div></div></div>
+      <blockquote>
+        
+        <p><em>More Than a Competition… </em> </p>
+        <span>At Singing Idols, every child receives more than applause—they gain confidence, overcome stage fear, express themselves 
+        creatively, and create memories that last a lifetime.<br></span>
+        <span>Whether your child dreams of becoming a professional singer or simply loves to sing, this platform encourages them to believe in themselves and perform with pride.<br></span>
+        <span>Because every great singer begins with one courageous step onto the stage.</span>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<!-- <section id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">11 · Questions</p>
+        <h2 class="split" data-anim="lines">Before you<br>take the <em>stage.</em></h2>
+      </div>
+      <p class="sh-right" data-rv>Everything singers ask us before their first audition. Anything else — the box office always answers.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">i.</span><span class="f-t">Who is eligible to compete?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Any singer aged eight or older, of any training background and any genre. Junior (8–15), Senior (16–35) and Open Masters (36+) divisions cover every voice; choirs and ensembles compete in their own categories.</p></div>
+      </div>
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">ii.</span><span class="f-t">What should I prepare for the audition?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Ninety seconds of one piece of your choosing — performed live, a cappella or with the house pianist. There is no required repertoire; we want to hear the song only you could sing.</p></div>
+      </div>
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">iii.</span><span class="f-t">Is there an entry fee?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>No. Registration is entirely free, and has been for all nine seasons. The competition is funded by its patrons and the national arts endowment.</p></div>
+      </div>
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">iv.</span><span class="f-t">Are travel and accommodation covered?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Travel to your nearest audition city is at your own cost. From the semi-final onward, the competition covers all travel, accommodation and accompanist fees for every finalist.</p></div>
+      </div>
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">v.</span><span class="f-t">Do I keep the rights to my performances?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Yes. You retain ownership of every piece you perform. The competition holds broadcast rights for the season only, and your finale recording belongs to you.</p></div>
+      </div>
+      <div class="faq-item" data-rv>
+        <button class="faq-q" aria-expanded="false"><span class="f-no">vi.</span><span class="f-t">How are finalists judged?</span><span class="f-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>On artistry alone: tone, interpretation, phrasing and presence. Early rounds are judged blind. No points are awarded for genre, training, or age beyond your division.</p></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== FINALE CTA ===== -->
+<section id="finale">
+  <div class="container">
+    <div class="stage-cta" data-rv>
+      <div class="top-val" aria-hidden="true"></div>
+      <div class="side-drape l" aria-hidden="true"></div>
+      <div class="side-drape r" aria-hidden="true"></div>
+      <div class="cone" style="left:14%" aria-hidden="true"></div>
+      <div class="cone c2" style="right:14%" aria-hidden="true"></div>
+      <div class="stage-floor" aria-hidden="true"></div>
+      <!-- <div class="spot-mic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></div> -->
+      <h2 class="split" data-anim="lines">Let the World <br><em>Hear Your Voice!</em></h2>
+      <p class="sc-sub">Registrations are now open.<br>Give your child the opportunity to sing, shine, and create unforgettable memories.</p>
+      <em style="color: var(--gold); font-family: Georgia, 'Times New Roman', Times, serif; font-size: 25px; margin-bottom: 20px;">Register Now and Begin Your Musical Journey!</em>
+      <div class="hero-cta">
+        <a href="#register" class="btn btn-gold">Claim Your Audition <span class="arr">→</span></a>
+        <a href="#categories" class="btn btn-ghost">View the Season Programme</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="padding-top: 0;">
+  <div class="container">
+    <div class="f-staff" aria-hidden="true" >
+      <i style="--x:8%">♪</i><i style="--x:34%">♫</i><i style="--x:61%">𝄞</i><i style="--x:88%">♬</i>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Singing Idols · Delhi NCR. All rights reserved.</span>
+      <span class="f-note">Season I, Registrations Now Open</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  const burger = document.getElementById('burger');
+  const mMenu = document.getElementById('mMenu');
+
+  burger.addEventListener('click', () => {
+    const isOpen = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  mMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.classList.add('is-open');
+  }, 1000);
+});
+
+// Generic reveal for anything marked data-rv
+gsap.utils.toArray('[data-rv]').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+});
+
+// Split-line reveal for headings marked data-anim="lines"
+gsap.utils.toArray('[data-anim="lines"]').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 88%',
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+});
+</script>
+</body>
+
+</html>
