@@ -755,7 +755,16 @@ background:repeating-linear-gradient(180deg,rgba(212,175,55,.3) 0 1px,transparen
   .sleeve:hover{
     transform:rotate(0deg);
   }
-}
+  .vinyl2 {
+    position: absolute;
+    top: 8%;
+    width: 88%;
+    height: 81%;}
+    .sleeve:hover .vinyl2{
+      left: 26%;
+    }
+
+  }
 @media (max-width:620px){
   .why-grid,.judge-grid{grid-template-columns:1fr 1fr}
   .f-card{padding: 31px 16px 31px;}
