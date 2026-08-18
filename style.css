@@ -844,7 +844,7 @@ background:repeating-linear-gradient(180deg,rgba(212,175,55,.3) 0 1px,transparen
   font-weight:700;
   letter-spacing:.18em;
   text-transform:uppercase;
-  padding:16px 0 calc(16px + env(safe-area-inset-bottom));
+  padding:12px 0 calc(12px + env(safe-area-inset-bottom));
   box-shadow:0 -10px 30px -10px rgba(0,0,0,.5);
   transform:translateY(100%);
   opacity:0;
