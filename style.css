@@ -133,7 +133,7 @@ body.menu-open .site-header{
 .m-menu{position:fixed;inset:0;z-index:120;background:linear-gradient(180deg,#1B0F26,#14091E);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,8vw,80px);
 clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease);visibility:hidden}
 body.menu-open .m-menu{clip-path:inset(0 0 0% 0);visibility:visible}
-.m-menu a{font-size:clamp(17px,4vw,52px);color: var(--ink2); padding:10px 0;border-bottom:1px solid var(--hair-soft);display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s,color .3s}
+.m-menu a{font-size:clamp(18px,5vw,52px);color: var(--ink2); padding:10px 0;border-bottom:1px solid var(--hair-soft);display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s,color .3s}
 body.menu-open .m-menu a{opacity:1;transform:none}
 .m-menu a:hover{color:var(--gold-hi)}
 .m-menu a small{font-family:var(--body);font-size:15px;letter-spacing:.3em;color:var(--gold)}
